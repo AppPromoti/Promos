@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="Project.Project" android:versionCode="1" android:versionName="1.0">
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="11" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <application android:label="app_name" android:theme="@style/Theme.DesignDemo" android:icon="@drawable/icon" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <activity android:label="CatalogActivity" android:name="md5d117dc0cca05d9cf3d645e7a5aebde3d.CatalogActivity" />
+    <activity android:label="FavoritesActivity" android:name="md5d117dc0cca05d9cf3d645e7a5aebde3d.FavoritesActivity" />
+    <activity android:label="StoreInfoActivity" android:name="md5d117dc0cca05d9cf3d645e7a5aebde3d.StoreInfoActivity" />
+    <activity android:label="SettingsActivity" android:name="md5d117dc0cca05d9cf3d645e7a5aebde3d.SettingsActivity" />
+    <activity android:label="Activity1" android:name="md5d117dc0cca05d9cf3d645e7a5aebde3d.StoresActivity" />
+    <activity android:icon="@drawable/icon" android:label="Project" android:name="md5d117dc0cca05d9cf3d645e7a5aebde3d.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="PromotionsActivity" android:name="md5d117dc0cca05d9cf3d645e7a5aebde3d.PromotionsActivity" />
+    <service android:name="md59f70a99687498e7ba187118950981d26.KeepAliveService" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="Project.Project.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.Project.Project" />
+      </intent-filter>
+    </receiver>
+    <activity android:name="com.facebook.FacebookActivity" android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:theme="@style/com_facebook_activity_theme" />
+    <activity android:name="com.facebook.CustomTabActivity" android:exported="true"></activity>
+    <activity android:name="com.facebook.CustomTabMainActivity" />
+    <activity android:name="com.facebook.FacebookActivity" android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:theme="@style/com_facebook_activity_theme" />
+    <activity android:name="com.facebook.CustomTabActivity" android:exported="true"></activity>
+    <activity android:name="com.facebook.CustomTabMainActivity" />
+  </application>
+</manifest>
