@@ -22,13 +22,14 @@ using Java.Security;
 
 namespace Project.BussinesLayer
 {
-    [Activity(Label = "Project", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Project"/*, MainLauncher = true, Icon = "@drawable/icon"*/)]
     public class MainActivity : AppCompatActivity,NavigationView.IOnNavigationItemSelectedListener
     {
 
         private DrawerLayout mDrawerLayout;
         private V7SearchView mSearchView;
         private V7Toolbar mToolbar;
+        private CardView mCardView;        
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -46,6 +47,16 @@ namespace Project.BussinesLayer
 
             var navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
             navigationView.SetNavigationItemSelectedListener(this);
+
+            var header = navigationView.GetHeaderView(0);
+
+            mCardView = (CardView)header.FindViewById(Resource.Id.card_view);
+            mCardView.Click += MCardView_Click;
+        }
+     
+        private void MCardView_Click(object sender, EventArgs e)
+        {
+            StartActivity(typeof(ProfileActivity));
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
